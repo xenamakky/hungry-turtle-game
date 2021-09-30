@@ -32,10 +32,17 @@ start.color('white')
 start.penup()
 start.hideturtle()
 start.setposition(290, -300)
-startPrint = "Game begins in 5 seconds"
-start.write(startPrint, align = 'right', font = ('Futura', 20, 'bold', 'underline'))
 
-time.sleep(5)
+countdown = 5
+
+for i in range(countdown):
+    startPrint = "Game begins in " + str(countdown) + " seconds"
+    start.clear()
+    start.write(startPrint, align = 'right', font = ('Futura', 20, 'bold', 'underline'))
+
+    countdown -= 1
+
+    time.sleep(1)
 
 title.undo()
 title.hideturtle()
